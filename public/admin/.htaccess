@@ -1,0 +1,5 @@
+Options -Indexes
+
+<FilesMatch "^(auth|session|header|footer)\.php$">
+    Require all denied
+</FilesMatch>

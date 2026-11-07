@@ -1,0 +1,11 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(config|database|python|\.playwright-cli)(/|$) - [F,L,NC]
+    RewriteRule ^(PRD_.*\.md|AUDIT_REPORT\.md)$ - [F,L,NC]
+</IfModule>
+
+<FilesMatch "\.(sql|md|py|pyc|log|json|lock|ini)$">
+    Require all denied
+</FilesMatch>

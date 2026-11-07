@@ -1,0 +1,55 @@
+# === Kredensial & konfigurasi lokal ===
+.env
+.env.*
+!.env.example
+config/database.local.php
+python/db_config.local.json
+*.local.php
+*.local.json
+
+# === Dump database (data sensitif) ===
+database/*.sql
+!database/schema.sql
+
+# === Dokumentasi internal ===
+AUDIT_REPORT.md
+
+# === Artefak Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+ENV/
+.python-version
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# === Model hasil training (generated oleh train.py) ===
+python/models/*.pkl
+
+# === Log, temp, backup ===
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+*.swp
+*~
+
+# === OS & editor ===
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.code-workspace
+
+# === Tooling ===
+.playwright-cli/
+node_modules/
+vendor/
